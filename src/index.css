@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html,
+body,
+main,
+#root {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  --border-radius: 20px;
+  --r_0: #840606;
+  --r_1: #f63838;
+  --r_2: #ff5353;
+  --br_1: #620000;
+  --magnetic-size: -3rem;
+  /* background-color: #f63838; */
+}
+body {
+  background: rgb(246, 56, 56);
+  background: radial-gradient(circle, rgba(246, 56, 56, 1) 20%, #780404 100%);
+}
+
+div::-webkit-scrollbar {
+  width: 0px;               /* width of the entire scrollbar */
+}
+
+div::-webkit-scrollbar-track {
+  background: orange;        /* color of the tracking area */
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
+.InterfaceSection {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  z-index: 1;
+
+  /* font-family: 'Darumadrop One', cursive; */
+  /* font-family: 'DM Serif Display', serif; */
+}
+
+.circles {
+  font-family: 'Darumadrop One', cursive;
+  scale: 1;
+}
+
+.circles__text--4 {
+  font-size: 50px;
+}
+.circles__text {
+  fill: var(--br_1);
+  opacity: 0.7;
+}
+
+.MixInterfaceSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 200vh;
+}
+
+#magnetic-wrap {
+  display: block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.my-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100vh;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  font-family: 'Darumadrop One', cursive;
+  color: var(--br_1);
+  background-color: #78040420;
+  font-size: 22px;
+  transform-origin: 50% 50%;
+}
+
+.magnetic-size {
+  position: absolute;
+  bottom: -3rem;
+  top: -3rem;
+  left: -3rem;
+  right: -3rem;
+  z-index: 1;
+  border-radius: 100vh;
+}
+.safe-wrap {
+  margin: 3rem;
+}
+/* --------------------  ----------------------- */
+.MixInterfaceSection_wrapper {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MixInterfaceSection_form {
+  --size: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 100;
+  position: absolute;
+  border-radius: 20px;
+  min-width: var(--size);
+  width: fit-content;
+
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
+}
+
+.MixInterfaceSection_form_bg {
+  font-family: 'Darumadrop One', cursive;
+  width: 100%;
+  height: fit-content;
+  padding: 0px 30px;
+
+  background: rgba(255, 255, 255, 0.023);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* --------------------  top  ----------------------- */
+
+.MixInterfaceSection_form_top {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.MixInterfaceSection_form_top_contentLeft {
+  line-height: 16px;
+  font-size: 30px;
+}
+.MixInterfaceSection_form_top_contentRight {
+  display: flex;
+  width: fit-content;
+  align-items: end;
+}
+
+.MixInterfaceSection_form_top_contentRight_result {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+/* --------------------  mid  ----------------------- */
+
+.MixInterfaceSection_form_mid {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.MixInterfaceSection_form_mid_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  transition: background-color 0.2s ease-in-out;
+}
+.MixInterfaceSection_form_mid_btn:hover {
+  background-color: #62000015;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 7px;
+  border-radius: 100px;
+  background: var(--r_2);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+/* --------------------  bot  ----------------------- */
+
+.MixInterfaceSection_form_bot {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  /* padding: 0px 30px; */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out;
+}
+.MixInterfaceSection_form_bot:hover {
+  background: rgba(255, 255, 255, 0.076);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.MixInterfaceSection_form_bot_text {
+  max-width: calc(30vw - 60px);
+  word-break: break-all;
+  line-height: 12px;
+}
+
+
+/* ------------------- congratulations  ------------------------*/
+.MixInterfaceSection_Congratulations{
+  z-index: 110;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.MixInterfaceSection_Congratulations_body{
+  font-size: 100px;
+  font-family: 'Darumadrop One', cursive;
+}
